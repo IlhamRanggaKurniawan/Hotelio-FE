@@ -16,8 +16,10 @@ const MainDashboard = () => {
             {/* Text */}
             <div className="relative z-10 flex flex-col justify-center h-full px-8 md:px-16 text-white">
                 <div className="max-w-2xl">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 font-[]">
                         Find The Best Hotel <br />
+                    </h1>
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4">
                         With <span className="text-yellow-400">HOTELIO</span>
                     </h1>
                     <p className="text-base md:text-lg leading-relaxed">
