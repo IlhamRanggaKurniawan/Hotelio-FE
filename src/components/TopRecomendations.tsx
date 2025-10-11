@@ -1,11 +1,11 @@
-const Recommendations = () => {
+const TopRecommendations = () => {
   return (
-    <section className="w-full px-6 md:px-16 my-16">
+    <section className="w-full px-6 md:px-16 my-16 mt-30">
       {/* Header */}
 
       <div className="flex justify-between mb-10 max-w-x1">
         <h2 className="text-4xl font-bold">
-          OUR MOST VISITED HOTEL ON 2025
+          OUR MOST VISITED HOTEL IN 2025
         </h2>
         <p className="text-gray-600 max-w-md">
           Take a look at our best choice for the hotels of the year, we pick the hotels from our amazing visitor
@@ -28,12 +28,14 @@ const Recommendations = () => {
           <div className="absolute bottom-4 left-4 text-white drop-shadow-lg">
             <h3 className="text-xl font-bold hover:bg-yellow-300 hover:text-black">Grand Ghifar Hotel</h3>
             <span className="block text-sm">Kertek, Indonesia</span>
-            <div className="text-yellow-400 text-sm">★★★★★ 5.0 stars rating</div>
+            <div className="text-sm"><span className="text-yellow-400">★★★★★</span> 5.0 stars rating</div>
           </div>
         </a>
 
-        {/* Small cards */}
+        {/* Small cards*/}
         <div className="flex flex-col gap-6">
+
+          {/* Small cards top*/}
           <a
             href="#"
             className="relative rounded-xl overflow-hidden group h-[400px] w-[450px]"
@@ -46,10 +48,11 @@ const Recommendations = () => {
             <div className="absolute bottom-3 left-3 text-white drop-shadow-lg">
               <h3 className="text-lg font-bold hover:bg-yellow-300 hover:text-black">Ghifar Ocean View Resort</h3>
               <span className="block text-sm">Garung, Indonesia</span>
-              <div className="text-yellow-400 text-xs">★★★★★ 4.8 stars rating</div>
+              <div className=" text-xs"><span className="text-yellow-400">★★★★★</span> 4.8 stars rating</div>
             </div>
           </a>
 
+          {/* Small cards bottom*/}
           <a
             href="#"
             className="relative rounded-xl overflow-hidden group h-[400px] w-[450px]"
@@ -62,7 +65,7 @@ const Recommendations = () => {
             <div className="absolute bottom-3 left-3 text-white drop-shadow-lg">
               <h3 className="text-lg font-bold hover:bg-yellow-300 hover:text-black">Ghifar Blue Lagoon Hotel</h3>
               <span className="block text-sm">Sawangan, Indonesia</span>
-              <div className="text-yellow-400 text-xs">★★★★★ 4.9 stars rating</div>
+              <div className=" text-xs"><span className="text-yellow-400">★★★★★</span> 4.9 stars rating</div>
             </div>
           </a>
         </div>
@@ -71,4 +74,4 @@ const Recommendations = () => {
   );
 };
 
-export default Recommendations;
+export default TopRecommendations;

@@ -1,14 +1,16 @@
 
 import Navbar from './components/Navbar'
 import MainDashboard from './components/MainDashboard'
-import Recommendations from './components/Recomendations'
+import TopRecommendations from './components/TopRecomendations'
+import GeneralRecomendations from './components/GeneralRecomendations'
 
 function App() {
   return (
     <>
       <Navbar />
       <MainDashboard/>
-      <Recommendations/>
+      <TopRecommendations/>
+      <GeneralRecomendations/>
     </>
   )
 }
