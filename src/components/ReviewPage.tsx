@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 
 const ReviewPage = () => {
-    const scrollRef = useRef(null);
+    const scrollRef = useRef<HTMLDivElement | null>(null);
 
     const reviews = [
         {
