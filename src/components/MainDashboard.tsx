@@ -45,7 +45,7 @@ const MainDashboard = () => {
                         placeholder="Type"
                         className="flex-1 border rounded-lg p-3"
                     />
-                    <button className="text-black border border-black pl-4 pr-4 rounded-lg cursor-pointer">Search</button>
+                    <button className="text-black border border-black hover:bg-black hover:text-white active:bg-purple-950 transition-colors pl-4 pr-4 rounded-lg cursor-pointer">Search</button>
                 </div>
             </div>
         </div>
