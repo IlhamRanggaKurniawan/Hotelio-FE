@@ -36,10 +36,10 @@ const GeneralRecomendations = () => {
         <section className="w-full px-6 md:px-16 my-16 mt-30">
             {/* Header */}
             <div className="flex justify-between mb-10 flex-col md:flex-row md:items-end">
-                <h2 className="text-4xl font-bold leading-tight">
+                <h2 className="text-4xl font-bold leading-tight hover:bg-red-900 hover:text-white">
                     EXPLORE OUR BEST LIST <br /> 5-STARS HOTEL
                 </h2>
-                <p className="text-gray-600 max-w-md mt-4 md:mt-0">
+                <p className="text-gray-600 max-w-md mt-4 md:mt-0 hover:text-black">
                     We understand that very important has different preferences. That’s why we provide lots of choice.
                 </p>
             </div>

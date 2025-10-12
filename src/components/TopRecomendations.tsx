@@ -4,10 +4,10 @@ const TopRecommendations = () => {
       {/* Header */}
 
       <div className="flex justify-between mb-10 max-w-x1">
-        <h2 className="text-4xl font-bold">
+        <h2 className="text-4xl font-bold hover:bg-red-900 hover:text-white">
           OUR MOST VISITED HOTEL IN 2025
         </h2>
-        <p className="text-gray-600 max-w-md">
+        <p className="text-gray-600 max-w-md hover:text-black">
           Take a look at our best choice for the hotels of the year, we pick the hotels from our amazing visitor
         </p>
       </div>

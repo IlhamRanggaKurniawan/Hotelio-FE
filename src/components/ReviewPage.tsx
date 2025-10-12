@@ -9,11 +9,11 @@ const ReviewPage = () => {
             name: "Jonathan",
             location: "London",
             comment:
-                "I had a pleasant stay at [Hotel Name]. The room was clean and comfortable, and the staff were friendly and helpful. The location was ideal—close to attractions and transit.",
+                "I had a pleasant stay at this hotel. The room was clean and comfortable, and the staff were friendly and helpful. The location was ideal—close to attractions and transit.",
             image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800",
             hotel: "Great Ghifar Hotel",
             address: "Wonosobo st 41st 15689",
-            rating: "⭐ 5.5 stars rating",
+            rating: "⭐ 5 stars rating",
         },
         {
             id: 2,
