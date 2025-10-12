@@ -2,18 +2,15 @@ import { Instagram, Youtube, Linkedin, X } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#fafafa] text-black py-10 h-60">
+    <footer className="bg-white text-black py-10">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start gap-10 px-6">
         {/* Logo + Socials */}
         <div className="flex flex-col items-center sm:items-start gap-4">
-          {/* Logo */}
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg"
             alt="Logo"
             className="w-8 h-8"
           />
-
-          {/* Social icons */}
           <div className="flex gap-3">
             <X className="w-5 h-5 cursor-pointer hover:opacity-60 transition" />
             <Instagram className="w-5 h-5 cursor-pointer hover:opacity-60 transition" />
@@ -48,6 +45,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Copyright */}
+      <div className="text-gray-500 text-xs px-6 mt-10 hover:text-pink-950 inline-block">
+        © 2025 Hotelio.com
+      </div>
+      
     </footer>
   );
 };
