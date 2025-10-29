@@ -1,4 +1,14 @@
+import { useState } from "react";
+
 const MainDashboard = () => {
+    const [showGuestBox, setShowGuestBox] = useState(false);
+    const [adults, setAdults] = useState(1);
+    const [children, setChildren] = useState(0);
+    const [rooms, setRooms] = useState(1);
+
+    const toggleGuestBox = () => setShowGuestBox(!showGuestBox);
+    const handleDone = () => setShowGuestBox(false);
+
     return (
         <div className="relative mt-[9vh] w-[99%] h-[90vh] mx-auto rounded-3xl overflow-hidden">
             {/* Background image */}
@@ -30,8 +40,7 @@ const MainDashboard = () => {
                 </div>
 
                 {/* Search box */}
-                <div className="bg-white rounded-xl p-6 flex flex-col md:flex-row gap-3 w-full max-w-4xl text-black mt-9">
-
+                <div className="bg-white rounded-xl p-6 flex flex-col md:flex-row gap-3 w-full max-w-fit text-black mt-9 relative">
                     {/* Location */}
                     <div className="flex flex-col flex-1">
                         <label className="text-xs text-gray-500 mb-1">Location</label>
@@ -48,6 +57,7 @@ const MainDashboard = () => {
                             <label className="text-xs text-gray-500 mb-1">Check-in</label>
                             <input type="date" className="flex-1 border rounded-lg p-3" />
                         </div>
+
                         <div className="flex flex-col flex-1">
                             <label className="text-xs text-gray-500 mb-1">Check-out</label>
                             <input type="date" className="flex-1 border rounded-lg p-3" />
@@ -55,13 +65,86 @@ const MainDashboard = () => {
                     </div>
 
                     {/* Guests / Room selector */}
-                    <div className="flex flex-col flex-1">
+                    <div className="flex flex-col flex-1 relative">
                         <label className="text-xs text-gray-500 mb-1">Guest & Room</label>
-                        <input
-                            type="search"
-                            placeholder="Select"
-                            className="w-full border rounded-lg p-3 text-left"
-                        />
+                        <button
+                            onClick={toggleGuestBox}
+                            className="w-full border rounded-lg p-3 text-left whitespace-nowrap overflow-hidden text-ellipsis"
+                        >
+                            {adults} adults · {children} children · {rooms} rooms
+                        </button>
+
+
+                        {showGuestBox && (
+                            <div className="absolute left-full mt-2 left-0 w-full bg-white border rounded-2xl shadow-lg p-4 z-20">
+                                {/* Adults */}
+                                <div className="flex justify-between items-center mb-3">
+                                    <span>Adults</span>
+                                    <div className="flex items-center gap-3">
+                                        <button
+                                            onClick={() => setAdults(Math.max(1, adults - 1))}
+                                            className="border px-2 rounded"
+                                        >
+                                            -
+                                        </button>
+                                        <span>{adults}</span>
+                                        <button
+                                            onClick={() => setAdults(adults + 1)}
+                                            className="border px-2 rounded"
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Children */}
+                                <div className="flex justify-between items-center mb-3">
+                                    <span>Children</span>
+                                    <div className="flex items-center gap-3">
+                                        <button
+                                            onClick={() => setChildren(Math.max(0, children - 1))}
+                                            className="border px-2 rounded"
+                                        >
+                                            -
+                                        </button>
+                                        <span>{children}</span>
+                                        <button
+                                            onClick={() => setChildren(children + 1)}
+                                            className="border px-2 rounded"
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                </div>
+
+                                {/* Rooms */}
+                                <div className="flex justify-between items-center mb-4">
+                                    <span>Rooms</span>
+                                    <div className="flex items-center gap-3">
+                                        <button
+                                            onClick={() => setRooms(Math.max(1, rooms - 1))}
+                                            className="border px-2 rounded"
+                                        >
+                                            -
+                                        </button>
+                                        <span>{rooms}</span>
+                                        <button
+                                            onClick={() => setRooms(rooms + 1)}
+                                            className="border px-2 rounded"
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <button
+                                    onClick={handleDone}
+                                    className="w-full border rounded-lg py-2 hover:bg-black hover:text-white transition-colors"
+                                >
+                                    Done
+                                </button>
+                            </div>
+                        )}
                     </div>
 
                     {/* Search Button */}
@@ -70,7 +153,6 @@ const MainDashboard = () => {
                             Search
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>
