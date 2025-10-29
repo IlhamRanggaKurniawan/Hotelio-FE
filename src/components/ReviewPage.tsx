@@ -122,6 +122,7 @@ const ReviewPage = () => {
             >
                 ←
             </button>
+            
             <button
                 onClick={scrollRight}
                 className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white hover:bg-yellow-300 text-black p-2 rounded-full transition-colors cursor-pointer"

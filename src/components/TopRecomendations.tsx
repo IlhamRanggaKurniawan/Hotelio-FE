@@ -18,7 +18,7 @@ const TopRecommendations = () => {
         {/* Big card (col-span-2) */}
         <a
           href="#"
-          className="relative col-span-2 rounded-xl overflow-hidden group h-[829px] w-[900px]"
+          className="relative col-span-2 rounded-xl overflow-hidden group h-auto w-auto"
         >
           <img
             src="https://images.unsplash.com/photo-1479502806991-251c94be6b15?q=80&w=1170&auto=format&fit=crop"
@@ -38,7 +38,7 @@ const TopRecommendations = () => {
           {/* Small cards top*/}
           <a
             href="#"
-            className="relative rounded-xl overflow-hidden group h-[400px] w-[450px]"
+            className="relative rounded-xl overflow-hidden group h-auto w-auto]"
           >
             <img
               src="https://plus.unsplash.com/premium_photo-1687960116497-0dc41e1808a2?w=600&auto=format&fit=crop"
@@ -55,7 +55,7 @@ const TopRecommendations = () => {
           {/* Small cards bottom*/}
           <a
             href="#"
-            className="relative rounded-xl overflow-hidden group h-[400px] w-[450px]"
+            className="relative rounded-xl overflow-hidden group h-auto w-auto"
           >
             <img
               src="https://images.unsplash.com/photo-1529316275402-0462fcc4abd6?w=600&auto=format&fit=crop"
