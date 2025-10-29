@@ -74,7 +74,7 @@ const MainDashboard = () => {
                             {adults} adults · {children} children · {rooms} rooms
                         </button>
 
-
+                        {/* Selector */}
                         {showGuestBox && (
                             <div className="absolute left-full mt-2 left-0 w-full bg-white border rounded-2xl shadow-lg p-4 z-20">
                                 {/* Adults */}
