@@ -1,41 +1,28 @@
+import { Menu } from "lucide-react"
+import { Button } from "./ui/button"
+
 const Navbar = () => {
-  return (
-    <div className="fixed top-0 left-0 w-full z-1000 bg-white p-3 shadow flex justify-between font-[Arial] h-15">
-      {/* Left Side */}
-      <div className="font-bold cursor-pointer text-2xl ml-6 hover:bg-purple-950 hover:text-white pt-1 pb-1 pl-1 pr-1">
-        <a href="#">
-          HOTELIO
-        </a>
-      </div>
-      <div className="flex-1 cursor-pointer text-2xl font-semibold animate-sublogo pt-1 pb-1">
-        <a href="#">
-          .com
-        </a>
-      </div>
+    return (
+        <nav className="fixed top-0 left-0 w-full flex items-center justify-between h-16 bg-white z-50 px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12">
+            {/* left side */}
+            <div>
+                <h1 className="text-xl font-bold">Hotelio</h1>
+            </div>
 
-      {/* Right Side */}
-      <div className="flex gap-4">
-        {["Home", "Help", "Be a Partner", "About Us"].map((item) => (
-          <button
+            {/* right full */}
+            <div className="hidden md:flex gap-2">
+                <Button variant={"ghost"}>Beranda</Button>
+                <Button variant={"ghost"}>Bantuan</Button>
+                <Button variant={"ghost"}>Jadi Mitra</Button>
+                <Button variant={"ghost"}>Tentang Kami</Button>
+                <Button>Login</Button>
+                <Button variant={"outline"}>Register</Button>
+            </div>
 
-            key={item}
-            className="relative cursor-pointer active:text-purple-950
-            after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:h-[2px] after:w-0 after:bg-purple-950
-            after:transition-all after:duration-300 hover:after:left-0 hover:after:w-full"
-          >
-            {item}
-          </button>
-        ))}
+            {/* right mobile  */}
+            <Menu className="text-xl font-bold md:hidden" />
+        </nav>
+    )
+}
 
-        <button className="border-2 border-gray-950 pl-4 pr-4 rounded-[10px] ml-3 cursor-pointer hover:bg-black hover:text-white active:bg-purple-950 transition">
-          Login
-        </button>
-        <button className="border-2 border-gray-950 pl-3 pr-3 rounded-[10px] ml-1 mr-6 cursor-pointer hover:bg-black hover:text-white active:bg-purple-950 transition">
-          Register
-        </button>
-      </div>
-    </div>
-  );
-};
-
-export default Navbar;
+export default Navbar
